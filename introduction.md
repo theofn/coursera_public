@@ -9,5 +9,5 @@ close to shops or schools and they might like to minimise the use of car as poss
 So, it would be great if this kind of information was available.
 
 Using the Foursquare data, we want to provide such information for the Darmstadt area in Germany.
-Users of this information can then identify areas or neighborhoods which are a closer match
+Users of this information can then identify areas or neighborhoods which are a close match
 to their expectations.
