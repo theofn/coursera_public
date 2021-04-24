@@ -19,3 +19,5 @@ we will be able to see that cluster 1 contains 50% catering, 40% shops and
 10% entertainment venues. Cluster 2 contains 30% sports, 30% outdoor and 40%
 catering venues. On the map we will be able to draw hundreds of segments
 and will assign each segment one of two colors, corresponding to the two clusters.
+
+![](https://github.com/theofn/coursera_public/blob/main/grid_darmstadt.jpg)
