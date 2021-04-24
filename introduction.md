@@ -11,8 +11,8 @@ and other facilities or venues are in the surrounding area and at which distance
 For example, an ideal location for some people would be close to nature and having
 to use often the car and commute would not be an issue. For others, an ideal location would be
 close to shops or schools and they might like to minimise the use of car as possible.
-So, it would be advantageous if this kind of information was available because it would 
-help potential house or appartment buyers making the right decision regarding
+So, it would be helpful to make such information easily available 
+so that potential house or appartment buyers can make the right decision regarding
 the property location.
 
 ## Problem
@@ -20,9 +20,10 @@ the property location.
 The aim of this project is to characterize areas on a map using the Foursquare data,
 according to their vicinity to various venue categories, such as, childcare, sports,
 shops, entairtainment, healthcare, etc. The areas should be characterized by an effective
-radius, such that one can reach the venues on foot within a reasonable amount of time, e.g.
-no more than 15-20 minutes. To this end, a general grid approach will be used and will be
-applied in particular for the Darmstadt area in Germany. 
+radius, such that one can reach the venues within a reasonable amount of time, e.g.
+no more than 15-20 minutes on foot. To this end, a grid approach will be used and will be
+applied in particular for the Darmstadt area in Germany (which is well-known to the
+author of this document). 
 
 ## Target audience
 
