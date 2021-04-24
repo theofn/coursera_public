@@ -1,8 +1,8 @@
 # Segmentation and clustering of Darmstadt area - Data
 
 Our approach is to create a grid of segments 
-(you can think of it as a kind of neighborhood) of the Darmstadt area. 
-We will use the Foursquare location data to assign to each segment 
+(see image below) of the Darmstadt area. 
+We will use the Foursquare location data API to assign to each segment 
 the venues which are close to the segment center and their associated categories.
 We will then cluster the segments using the weight of the nearby venue categories, 
 i.e. the information of how much a certain category
