@@ -54,3 +54,11 @@ catering venues. On the map we will be able to draw hundreds of segments
 and will assign each segment one of two colors, corresponding to the two clusters.
 
 ![](https://github.com/theofn/coursera_public/blob/main/grid_darmstadt.jpg)
+
+# Methodology
+
+# Results
+
+# Discussion
+
+# Conclusion
