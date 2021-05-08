@@ -31,9 +31,9 @@ The target audience is potential buyers for housing reasons.
 Users of the results of this project will be able to identify areas which are a close match
 to their needs or expectations.
 
-# Segmentation and clustering of Darmstadt area - Data
+# Data
 
-Our approach is to create a grid of segments 
+My approach is to create a grid of segments 
 (see image below) of the Darmstadt area. 
 We will use the Foursquare location data API to assign to each segment 
 the venues which are close to the segment center and their associated categories.
@@ -55,7 +55,33 @@ and will assign each segment one of two colors, corresponding to the two cluster
 
 ![](https://github.com/theofn/coursera_public/blob/main/grid_darmstadt.jpg)
 
+The advantage of the approach decribed previously is that it is very general and it can be applied
+to an area which I know very well. Thus, I can verify that the results
+are consistent with my knowledge of the area. Unfortunately, there are
+are no other data sources, which would be appropriate for this clustering study.
+
+
 # Methodology
+
+The analysis begins by creating a uniform rectangular grid of nodes which includes
+the city of Darmstadt and the nearby surrouding areas. This west-east side
+is 13.8 km and the north-south side is 17.6 km. 
+
+The next step is to determine the size of the segments associated to each node.
+On one hand, a certain granularity is desired, so that we have enough segments to cluster.
+On the other hand, the segments should contain a certain number of venues. After a number
+of trials, it became clear that a good radius is 400 m around every node. 
+This results into a 35x35 grid.
+
+The data are then collected by iterating on the grid and using the venue search request of the
+Foursquare places API. The challenge here was to control the spatial extent of the 
+returned venues. The API request returns venues which are "near" the input location, however
+it is not apparently possible to control the radius, since the parameter "radius" is only 
+valid for searches using the parameters "categoryId" or "query". 
+
+I found a solution to this problem by using the haversine formulas. Thus, it was possible 
+to associate the returned venues to the correct segment.
+
 
 # Results
 
