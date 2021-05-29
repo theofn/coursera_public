@@ -63,6 +63,8 @@ no other data sources, which could be useful for this study.
 
 # Methodology
 
+## Collection of venue data
+
 The analysis begins by creating a uniform rectangular grid of nodes which includes
 the city of Darmstadt and the nearby surrouding areas. All the sides
 of the grid are 17.6 km long. 
@@ -81,8 +83,17 @@ it is not possible to control the radius in a useful way, since the parameter "r
 valid for searches using the parameters "categoryId" or "query". 
 
 I found a solution to this problem by using the haversine formulas. Thus, it was possible 
-to associate the venues found with Foursquare venue search to the correct segment.
+to associate the venues found with Foursquare venue search to the correct segment. For every grid
+node, the venue search returned a number of venues. The venues which are outside
+the circular area defined by the 400 m radius where discarded. The other venues
+are added as a row to a pandas dataframe. After iterating over all the grid nodes,
+all the data are collected. However, some venues are collected more than once.
+The duplicated are then removed from the data frame, so that every venue is unique.
 
+## Grouping of venue data
+
+Using the method described above, a total number of 3000? venues are collected, associated 
+with 900? segments. As expected, no venues are found in the vicinity of some nodes.
 
 # Results
 
