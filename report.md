@@ -57,30 +57,31 @@ and will assign each segment one of two colors, corresponding to the two cluster
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
-are consistent with my knowledge of the area. Unfortunately, there are
-are no other data sources, which would be appropriate for this clustering study.
+are consistent with my knowledge of the area. Unfortunately, I could find
+no other data sources, which could be useful for this study.
 
 
 # Methodology
 
 The analysis begins by creating a uniform rectangular grid of nodes which includes
-the city of Darmstadt and the nearby surrouding areas. This west-east side
-is 13.8 km and the north-south side is 17.6 km. 
+the city of Darmstadt and the nearby surrouding areas. All the sides
+of the grid are 17.6 km long. 
 
 The next step is to determine the size of the segments associated to each node.
 On one hand, a certain granularity is desired, so that we have enough segments to cluster.
-On the other hand, the segments should contain a certain number of venues. After a number
-of trials, it became clear that a good radius is 400 m around every node. 
-This results into a 35x35 grid.
+On the other hand, the segments should contain a high enough number of venues, so that
+the statistical aggregation operations which take place on every segmen, such as summing or averaging, make sense.
+After a number of trials, it became clear that a good radius is 400 m around every node. 
+This results into a 40x40 grid.
 
 The data are then collected by iterating on the grid and using the venue search request of the
 Foursquare places API. The challenge here was to control the spatial extent of the 
 returned venues. The API request returns venues which are "near" the input location, however
-it is not apparently possible to control the radius, since the parameter "radius" is only 
+it is not possible to control the radius in a useful way, since the parameter "radius" is only 
 valid for searches using the parameters "categoryId" or "query". 
 
 I found a solution to this problem by using the haversine formulas. Thus, it was possible 
-to associate the returned venues to the correct segment.
+to associate the venues found with Foursquare venue search to the correct segment.
 
 
 # Results
