@@ -101,7 +101,7 @@ which is probably a too high number for the clustering. Using all these categori
 useful results. Furthermore, as seen in 
 
 ![Figure 2](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
-
+*Figure 2*
 
 
 # Results
