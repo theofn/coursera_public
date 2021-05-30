@@ -98,11 +98,25 @@ The nodes are located in forest areas or in agricultural areas in which no data 
 
 Every venue is associated to a certain category. In our case, the venue data contain 471 categories,
 which is probably a too high number for the clustering. Using all these categories does not produce
-useful results. Furthermore, as seen in 
+useful results. Furthermore, the category distribution is such that the most frequently found category by far is 
+"Office" and exceeds by more than twice the second more frequent category, which is "Doctor's office", as it
+can be seen in the figure below.
 
-![Figure 2](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
-*Figure 2*
+![](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
 
+Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
+a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
+as long as it is a place where one can buy a beverage or a dish.
+
+Thus, perform a grouping of the venues as shown in the following table.
+
+| New category group | Foursqure categories |
+| ----------- | ----------- |
+| Education/Childcare      | high/middle/elementary school, college, university, nursery, daycare, etc |
+| Shopping   | mall, clothing, sporting goods, flower, tailor, gift shop, jewelry, shoe store, etc   |
+| Basics      | supermarket, grocery, vegetable, butcher, drugstore, bakery, etc |
+| Health      | hospital, doctor, pharmacy, dentist, medical |
+| ----------- | ----------- |
 
 # Results
 
