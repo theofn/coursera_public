@@ -92,8 +92,11 @@ The duplicated are then removed from the data frame, so that every venue is uniq
 
 ## Grouping of venue data
 
-Using the method described above, a total number of 3000? venues are collected, associated 
-with 900? segments. As expected, no venues are found in the vicinity of some nodes.
+Using the method described above, a total number of 4216 venues are collected, associated 
+with 820 segments. As expected, no venues are found in the vicinity of almost half of the nodes.
+The nodes are located in forest areas or in agricultural areas in which no data Fousquare data exist.
+
+Every venue is associated to a certain category. In our case, the venue data contain 471 categories.  
 
 # Results
 
