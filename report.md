@@ -108,15 +108,18 @@ Ideally, we need no more than 10 categories and they should have a broader sense
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
 as long as it is a place where one can buy a beverage or a dish.
 
-Thus, perform a grouping of the venues as shown in the following table.
+Thus,  a grouping of the venues is performed, as shown in the following table.
 
-| New category group | Foursqure categories |
+| New category group | Foursquare categories (or strings therein) |
 | ----------- | ----------- |
 | Education/Childcare      | high/middle/elementary school, college, university, nursery, daycare, etc |
 | Shopping   | mall, clothing, sporting goods, flower, tailor, gift shop, jewelry, shoe store, etc   |
 | Basics      | supermarket, grocery, vegetable, butcher, drugstore, bakery, etc |
 | Health      | hospital, doctor, pharmacy, dentist, medical |
-| ----------- | ----------- |
+| Catering | restaurant, café, cafeteria, burger, ice cream shop, pizza, coffee shop, coffee shop, etc |
+| Entertainment | entertainment, jazz, concert, theater, pub, nightlife, nightclub, lound, etc |
+| Sports | football, tennis, baseball, basketball, fitness, swimming, pool, stadium, etc |
+| Outdoor | 
 
 # Results
 
