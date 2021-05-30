@@ -96,9 +96,12 @@ Using the method described above, a total number of 4216 venues are collected, a
 with 820 segments. As expected, no venues are found in the vicinity of almost half of the nodes.
 The nodes are located in forest areas or in agricultural areas in which no data Fousquare data exist.
 
-Every venue is associated to a certain category. In our case, the venue data contain 471 categories.  
+Every venue is associated to a certain category. In our case, the venue data contain 471 categories,
+which is probably a too high number for the clustering. Using all these categories does not produce
+useful results. Furthermore, as seen in 
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
+![Figure 2](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
+
 
 
 # Results
