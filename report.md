@@ -53,7 +53,7 @@ we will be able to see that cluster 1 contains 50% catering, 40% shops and
 catering venues. On the map we will be able to draw hundreds of segments
 and will assign each segment one of two colors, corresponding to the two clusters.
 
-![](https://github.com/theofn/coursera_public/blob/main/grid_darmstadt_rect.JPG)
+![](https://github.com/theofn/coursera_public/blob/main/plots/grid_darmstadt_rect.JPG)
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
@@ -97,6 +97,9 @@ with 820 segments. As expected, no venues are found in the vicinity of almost ha
 The nodes are located in forest areas or in agricultural areas in which no data Fousquare data exist.
 
 Every venue is associated to a certain category. In our case, the venue data contain 471 categories.  
+
+![](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
+
 
 # Results
 
