@@ -106,7 +106,7 @@ can be seen in the figure below.
 
 Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
-as long as it is a place where one can buy a beverage or a dish.
+as long as it is a place where one can consume a beverage or a dish.
 
 Thus,  a grouping of the venues is performed, as shown in the following table.
 
