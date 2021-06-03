@@ -116,10 +116,10 @@ Thus,  a grouping of the venues is performed, as shown in the following table.
 | Shopping   | mall, clothing, sporting goods, flower, tailor, gift shop, jewelry, shoe store, etc   |
 | Basics      | supermarket, grocery, vegetable, butcher, drugstore, bakery, etc |
 | Health      | hospital, doctor, pharmacy, dentist, medical |
-| Catering | restaurant, café, cafeteria, burger, ice cream shop, pizza, coffee shop, coffee shop, etc |
+| Food service | restaurant, café, cafeteria, burger, ice cream shop, pizza, coffee shop, coffee shop, etc |
 | Entertainment | entertainment, jazz, concert, theater, pub, nightlife, nightclub, lound, etc |
 | Sports | football, tennis, baseball, basketball, fitness, swimming, pool, stadium, etc |
-| Outdoor | 
+| Outdoor | scenic, nature, national park, outdoors, river, zoo, castle, lake, etc |
 
 # Results
 
