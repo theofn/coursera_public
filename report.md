@@ -90,7 +90,7 @@ are added as a row to a pandas dataframe. After iterating over all the grid node
 all the data are collected. However, some venues are collected more than once.
 The duplicated are then removed from the data frame, so that every venue is unique.
 
-## Grouping of venue data
+## Grouping of venue categories
 
 Using the method described above, a total number of 4216 venues are collected, associated 
 with 820 segments. As expected, no venues are found in the vicinity of almost half of the nodes.
@@ -113,13 +113,43 @@ Thus,  a grouping of the venues is performed, as shown in the following table.
 | New category group | Foursquare categories (or strings therein) | # entries |
 | ----------- | ----------- | ----------- |
 | Education/Childcare      | high/middle/elementary school, college, university, nursery, daycare, etc | 89 |
-| Shopping   | mall, clothing, sporting goods, flower, tailor, gift shop, jewelry, shoe store, etc   | 135 |
-| Basics      | supermarket, grocery, vegetable, butcher, drugstore, bakery, etc | 224 |
-| Health      | hospital, doctor, pharmacy, dentist, medical | 707 |
-| Food service | restaurant, café, cafeteria, burger, ice cream shop, pizza, coffee shop, coffee shop, etc | 254 |
-| Entertainment | entertainment, jazz, concert, theater, pub, nightlife, nightclub, lound, etc | 160 |
-| Sports | football, tennis, baseball, basketball, fitness, swimming, pool, stadium, etc | 229 |
+| Shopping   | mall, clothing, sporting goods, flower, tailor, gift shop, jewelry, shoe store, etc   | 160 |
+| Basics      | supermarket, grocery, vegetable, butcher, drugstore, bakery, etc | 229 |
+| Health      | hospital, doctor, pharmacy, dentist, medical | 254 |
+| Food service | restaurant, café, cafeteria, burger, ice cream shop, pizza, coffee shop, coffee shop, etc | 707 |
+| Entertainment | entertainment, jazz, concert, theater, pub, nightlife, nightclub, lound, etc | 224 |
+| Sports | football, tennis, baseball, basketball, fitness, swimming, pool, stadium, etc | 135 |
 | Outdoor | scenic, nature, national park, outdoors, river, zoo, castle, lake, etc | 126 |
+
+As shown in the previous table, the category "food service" are over-represented in our data. 
+This has implications for the analysis and needs to be taken into account when the clustering is done
+and the results are analysed.
+
+## Grouping by segment and aggregation
+
+The next step to group the venue data by segment and calculate for every segment how much is the 
+weight of every category, the so-called aggregation. 
+This is an operation, which transforms a collection of numbers to a single number.
+There are several possibilities regarding aggregation. The following operators
+are considered: sum, mean and median.
+
+Using the sum operation results in representing the weight of each category using the absolute count of
+venues. In this case, the category "Food service" is practically in all segments
+the most abundant. Thus, all clusters are expected to have a high weight of "Food service" 
+and smaller amounts of the other categories.
+Depending on the clustering method, the category "Food service" could blur the effect of
+the other categories.
+
+Using the mean or median operation involves a normalization of the category count, as it
+takes into account the total number of categories in every segment. It also makes sense
+to use such operators because it is expected that it is not possible to have the similar amount
+of venues in all categories. However, the problem here is that in many segments the statistics
+are very poor, for example, there are segments with one outdoor venue. This can also lead to 
+a clustering which is not very representative of the venue category distribution.
+
+## Clustering
+
+
 
 # Results
 
