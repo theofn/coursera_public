@@ -125,11 +125,11 @@ As shown in the previous table, the category "food service" are over-represented
 This has implications for the analysis and needs to be taken into account when the clustering is done
 and the results are analysed.
 
-## Grouping by segment and aggregation
+## Grouping by segment and evaluation of category weights
 
 The next step to group the venue data by segment and calculate for every segment how much is the 
-weight of every category, the so-called aggregation. 
-This is an operation, which transforms a collection of numbers to a single number.
+weight of every category. The calculation is an aggregation operation 
+and transforms a collection of numbers to a single number.
 There are several possibilities regarding aggregation. The following operators
 are considered: sum, mean and median.
 
@@ -141,15 +141,22 @@ Depending on the clustering method, the category "Food service" could blur the e
 the other categories.
 
 Using the mean or median operation involves a normalization of the category count, as it
-takes into account the total number of categories in every segment. It also makes sense
-to use such operators because it is expected that it is not possible to have the similar amount
+takes into account the total number of venue categories in every segment. It also makes sense
+to use such an operator because it is expected that it is not possible to have a similar amount
 of venues in all categories. However, the problem here is that in many segments the statistics
-are very poor, for example, there are segments with one outdoor venue. This can also lead to 
+are poor: for example, there are segments with one outdoor venue. This can also lead to 
 a clustering which is not very representative of the venue category distribution.
 
 ## Clustering
 
-
+After the grouping-by-segment operation, the clustering of the venue data 
+takes place using the k-means algorithm. In particular, the implementation of 
+python package scikit-learn is used. To evaluate the clustering performance, and since the clustering is unsupervised,
+the inertia (within-cluster sum-of-squares) and the silhouette coeficient are used.
+In addition, for every cluster, the weight of each venue is evaluated and these
+data are visualized using bar plots.
+Finally, a map of the Darmstadt area with segments colored depending on
+their cluster assignment is produced to visualize
 
 # Results
 
