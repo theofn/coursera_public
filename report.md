@@ -156,7 +156,7 @@ the inertia (within-cluster sum-of-squares) and the silhouette coeficient are us
 In addition, for every cluster, the weight of each venue is evaluated and these
 data are visualized using bar plots.
 Finally, a map of the Darmstadt area with segments colored depending on
-their cluster assignment is produced to visualize
+their cluster assignment is produced to visualize the spatial distribution.
 
 # Results
 
