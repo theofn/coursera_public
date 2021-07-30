@@ -174,7 +174,7 @@ On the other hand, when the mean operator is considered, the silhouette score in
 
 ## Effect of the number of clusters
 
-If the number of clusters is increased, the performance metrics of the clustering improve. 
+If the number of clusters is increased and when the mean (or media) operator is used, the cluster cohesion as measured by the silhouette score improves. This is also observed in the distribution of venue categories in the clusters. 
 
 
 
