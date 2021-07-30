@@ -102,7 +102,7 @@ useful results. Furthermore, the category distribution is such that the most fre
 "Office" and exceeds by more than twice the second more frequent category, which is "Doctor's office", as it
 can be seen in the figure below.
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
+![](./plots/top_cats.jpg)
 
 Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
