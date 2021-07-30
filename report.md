@@ -164,6 +164,8 @@ their cluster assignment is produced to visualize the spatial distribution.
 
 The aggregation operation leads to different clusterings. This is observed in one of the clustering performance metrics, which we consider: the silhouette score (aka silhouette coefficient). It is also observed on the distribution of the category in the clusters. For example, when the sum operator is considered, the silhouette score does not increase as a function of the number of clusters, while the inertia decreases.
 
+![](https://github.com/theofn/coursera_public/blob/main/plots/inertias_silcoefs_sum.png)
+
 When the mean operator is considered, the silhouette score increases as a function of the number of clusters.
 
 ## Effect of the number of clusters
