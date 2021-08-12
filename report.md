@@ -110,11 +110,11 @@ can be seen in the figure below.
 </figure>
 <br/><br/>
 
-Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
+Ideally, we need a few categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
 as long as it is a place where one can consume a beverage or a dish.
 
-Thus,  a grouping of the venues is performed, as shown in the following table.
+Thus,  a grouping of the venues is performed, as shown in the following table, leading to eight venues in total.
 
 | New category group | Foursquare categories (or strings therein) | # entries |
 | ----------- | ----------- | ----------- |
@@ -210,6 +210,12 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 ## Operator="mean", k=8
 
+If we look at the category distribution inside clusters, we see that seven out of eight clusters contain only one dominant category.
+Cluster 3 is slightly different and contains two dominant categories, "food service" and "basics", 
+which are represented with approximately the same weight.
+Based on my knowledge of the area, this cluster visualization makes sense and is a quite realistic representation.
+For example, it is observed that cluster 2 with the dominant category "outdoor" is found in the areas outside cities.
+
 <figure>
   <img src=./plots/mean_8_map.JPG alt="my alt text"/>
   <figcaption> Fig. 7 - Map using k=8 and operator="mean"</figcaption>
@@ -222,13 +228,20 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 ## Clustering performance
 
-<figure>
-  <img src=./plots/inertias_silcoefs_sum.png alt="my alt text"/>
-  <figcaption> Fig. 7 - operator="sum": inertia and silhouette score as a function of k</figcaption>
-</figure>
+Plotting the silhouette score as a function of k for the operator "sum" (Fig. 7) shows that
+the clustering quality decreases as k is increased.
 
 <figure>
-  <img src=./plots/inertias_silcoefs_mean.png alt="my alt text"/>
+  <img src=./plots/inertias_silcoefs_sum.png alt="my alt text" width="300"/>
+  <figcaption> Fig. 7 - operator="sum": inertia and silhouette score as a function of k</figcaption>
+</figure>
+<br/><br/>
+
+When the silhouette score is plotted for the operator "mean" (Fig. 8), it is observed 
+that it increase a function of k and seems to reach a plateau when k is approximately 8.
+
+<figure>
+  <img src=./plots/inertias_silcoefs_mean.png alt="my alt text" width="300"/>
   <figcaption> Fig. 8 - operator="mean": inertia and silhouette score as a function of k</figcaption>
 </figure>
 
@@ -238,10 +251,8 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 The aggregation operation leads to different clusterings. This is observed in one of the clustering performance metrics, which we consider: the silhouette score (aka silhouette coefficient). It is also observed on the distribution of the category in the clusters. For example, when the sum operator is considered, the silhouette score tends to decrease as a function of the number of clusters, while the inertia decreases.
 
-
 This implies that the clusters become less cohesive and less well separated as the k, the number of clusters, increases.
 On the other hand, when the mean operator is considered, the silhouette score increases as a function of the number of clusters and seems to reach a plateau when k is approximately 8.
-
 
 
 ## Effect of the number of clusters
