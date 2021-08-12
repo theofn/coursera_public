@@ -191,7 +191,7 @@ the clustering here leads to more differentiation at the city borders and in the
 the cluster distribution inside the city and residential areas is quite uniform and dominated by cluster 3.
 
 <figure>
-  <img src=./plots/mean_4_map.jpg alt="my alt text"/>
+  <img src=./plots/mean_4_map.JPG alt="my alt text"/>
   <figcaption> Fig. 3 - Map using k=4 and operator="mean"</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ the cluster distribution inside the city and residential areas is quite uniform 
 ## Operator="mean", k=8
 
 <figure>
-  <img src=./plots/mean_8_map.jpg alt="my alt text"/>
+  <img src=./plots/mean_8_map.JPG alt="my alt text"/>
   <figcaption> Fig. 5 - Map using k=8 and operator="mean"</figcaption>
 </figure>
 
