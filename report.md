@@ -105,7 +105,7 @@ useful results. Furthermore, the category distribution is such that the most fre
 can be seen in the figure below.
 
 <figure>
-  <img src=./plots/top_cats.JPG alt="my alt text"/>
+  <img src=./plots/top_cats.jpg alt="my alt text"/>
   <figcaption> Fig. 2 - Venue categories with the highest frequency occurence</figcaption>
 </figure>
 
