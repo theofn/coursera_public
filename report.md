@@ -53,7 +53,7 @@ and will assign each segment one of two colors, corresponding to the two cluster
 
 <figure>
   <img src=./plots/grid_darmstadt_rect.JPG alt="my alt text"/>
-  <figcaption> Fig. 1 - Map using k=4 and operator="sum"</figcaption>
+  <figcaption> Fig. 1 - Grid of segments covering Darmstadt area</figcaption>
 </figure>
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
