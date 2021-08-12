@@ -12,8 +12,6 @@ For example, an ideal location for some people would be close to nature and havi
 to use often the car and commute would not be an issue. For others, an ideal location would be
 close to shops or schools and they might like to minimise the use of car as possible.
 So, it would be helpful to make such information easily available 
-so that potential house or appartment buyers can make the right decision regarding
-the property location.
 
 ## Problem
 
@@ -53,7 +51,7 @@ we will be able to see that cluster 1 contains 50% catering, 40% shops and
 catering venues. On the map we will be able to draw hundreds of segments
 and will assign each segment one of two colors, corresponding to the two clusters.
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/grid_darmstadt_rect.JPG)
+![](./plots/grid_darmstadt_rect.JPG)
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
@@ -102,7 +100,7 @@ useful results. Furthermore, the category distribution is such that the most fre
 "Office" and exceeds by more than twice the second more frequent category, which is "Doctor's office", as it
 can be seen in the figure below.
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/top_cats.jpg)
+![](./plots/top_cats.jpg)
 
 Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
@@ -159,6 +157,75 @@ Finally, a map of the Darmstadt area with segments colored depending on
 their cluster assignment is produced to visualize the spatial distribution.
 
 # Results
+
+Let's start inspecting the results by examining some representative cases.
+ 
+## Operator="sum", k=4
+
+In all four clusters, the category "food service" is represented with the heighest weight. 
+The dominant cluster is cluster 2, which is different from the other cluster in that the weights of
+the other categories (not "food service") are higher. In this case, the over-representation of the
+category "food service" in our data is clear. We also observe clearly the difference 
+between the city centers, where "food service" is very dominant and peaked, 
+and the surrounding areas, where the category distribution inside the clusters
+is not as peaked. 
+
+<figure>
+  <img src=./plots/sum_4_map.jpg alt="my alt text"/>
+  <figcaption> Fig. 1 - Map using k=4 and operator="sum"</figcaption>
+</figure>
+
+<figure>
+  <img src=./plots/sum_cluster_4.png alt="my alt text" width="700"/>
+  <figcaption>Fig. 2 - k=4, operator="sum": category distribution in clusters.</figcaption>
+</figure>
+
+## Operator="mean", k=4
+
+The dominant cluster is cluster 3, which is very different from the other clusters, in that
+the category distribution is more uniform and not as peaked as in the other clusters. 
+We observe that the clusters 0, 1 and 2 
+contain almost purely "food service", "sports" and "outdoor".
+In contrast to the case with operator "sum" and k=4, 
+the clustering here leads to more differentiation at the city borders and in the areas beyond the cities, whereas
+the cluster distribution inside the city and residential areas is quite uniform and dominated by cluster 3.
+
+<figure>
+  <img src=./plots/mean_4_map.jpg alt="my alt text"/>
+  <figcaption> Fig. 3 - Map using k=4 and operator="mean"</figcaption>
+</figure>
+
+<figure>
+  <img src=./plots/mean_cluster_4.png alt="my alt text" width="700"/>
+  <figcaption>Fig. 4 - k=4, operator="mean": category distribution in clusters.</figcaption>
+</figure>
+
+## Operator="mean", k=8
+
+<figure>
+  <img src=./plots/mean_8_map.jpg alt="my alt text"/>
+  <figcaption> Fig. 5 - Map using k=8 and operator="mean"</figcaption>
+</figure>
+
+<figure>
+  <img src=./plots/mean_cluster_8.png alt="my alt text" width="700"/>
+  <figcaption>Fig. 6 - k=8, operator="mean": category distribution in clusters.</figcaption>
+</figure>
+
+## Clustering performance
+
+<figure>
+  <img src=./plots/inertias_silcoefs_sum.png alt="my alt text"/>
+  <figcaption> Fig. 7 - Map using k=8 and operator="mean"</figcaption>
+</figure>
+
+<figure>
+  <img src=./plots/inertias_silcoefs_mean.png alt="my alt text"/>
+  <figcaption> Fig. 8 - Map using k=8 and operator="mean"</figcaption>
+</figure>
+
+
+
 
 # Discussion
 
