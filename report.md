@@ -51,7 +51,10 @@ we will be able to see that cluster 1 contains 50% catering, 40% shops and
 catering venues. On the map we will be able to draw hundreds of segments
 and will assign each segment one of two colors, corresponding to the two clusters.
 
-![](./plots/grid_darmstadt_rect.JPG)
+<figure>
+  <img src=./plots/grid_darmstadt_rect.JPG alt="my alt text"/>
+  <figcaption> Fig. 1 - Map using k=4 and operator="sum"</figcaption>
+</figure>
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
@@ -216,12 +219,12 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 <figure>
   <img src=./plots/inertias_silcoefs_sum.png alt="my alt text"/>
-  <figcaption> Fig. 7 - Map using k=8 and operator="mean"</figcaption>
+  <figcaption> Fig. 7 - operator="sum": inertia and silhouette score as a function of k</figcaption>
 </figure>
 
 <figure>
   <img src=./plots/inertias_silcoefs_mean.png alt="my alt text"/>
-  <figcaption> Fig. 8 - Map using k=8 and operator="mean"</figcaption>
+  <figcaption> Fig. 8 - operator="mean": inertia and silhouette score as a function of k</figcaption>
 </figure>
 
 # Discussion
