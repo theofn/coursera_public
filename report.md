@@ -56,6 +56,7 @@ and will assign each segment one of two colors, corresponding to the two cluster
   <figcaption> Fig. 1 - Grid of segments covering Darmstadt area</figcaption>
 </figure>
 
+
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
 are consistent with my knowledge of the area. Unfortunately, I could find
@@ -103,7 +104,11 @@ useful results. Furthermore, the category distribution is such that the most fre
 "Office" and exceeds by more than twice the second more frequent category, which is "Doctor's office", as it
 can be seen in the figure below.
 
-![](./plots/top_cats.jpg)
+<figure>
+  <img src=./plots/top_cats.JPG alt="my alt text"/>
+  <figcaption> Fig. 2 - Venue categories with the highest frequency occurence</figcaption>
+</figure>
+
 
 Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
@@ -175,12 +180,12 @@ is not as peaked.
 
 <figure>
   <img src=./plots/sum_4_map.jpg alt="my alt text"/>
-  <figcaption> Fig. 1 - Map using k=4 and operator="sum"</figcaption>
+  <figcaption> Fig. 3 - Map using k=4 and operator="sum"</figcaption>
 </figure>
 
 <figure>
   <img src=./plots/sum_cluster_4.png alt="my alt text" width="700"/>
-  <figcaption>Fig. 2 - k=4, operator="sum": category distribution in clusters.</figcaption>
+  <figcaption>Fig. 4 - k=4, operator="sum": category distribution in clusters.</figcaption>
 </figure>
 
 ## Operator="mean", k=4
@@ -195,24 +200,24 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 <figure>
   <img src=./plots/mean_4_map.JPG alt="my alt text"/>
-  <figcaption> Fig. 3 - Map using k=4 and operator="mean"</figcaption>
+  <figcaption> Fig. 5 - Map using k=4 and operator="mean"</figcaption>
 </figure>
 
 <figure>
   <img src=./plots/mean_cluster_4.png alt="my alt text" width="700"/>
-  <figcaption>Fig. 4 - k=4, operator="mean": category distribution in clusters.</figcaption>
+  <figcaption>Fig. 6 - k=4, operator="mean": category distribution in clusters.</figcaption>
 </figure>
 
 ## Operator="mean", k=8
 
 <figure>
   <img src=./plots/mean_8_map.JPG alt="my alt text"/>
-  <figcaption> Fig. 5 - Map using k=8 and operator="mean"</figcaption>
+  <figcaption> Fig. 7 - Map using k=8 and operator="mean"</figcaption>
 </figure>
 
 <figure>
   <img src=./plots/mean_cluster_8.png alt="my alt text" width="700"/>
-  <figcaption>Fig. 6 - k=8, operator="mean": category distribution in clusters.</figcaption>
+  <figcaption>Fig. 8 - k=8, operator="mean": category distribution in clusters.</figcaption>
 </figure>
 
 ## Clustering performance
@@ -233,12 +238,10 @@ the cluster distribution inside the city and residential areas is quite uniform 
 
 The aggregation operation leads to different clusterings. This is observed in one of the clustering performance metrics, which we consider: the silhouette score (aka silhouette coefficient). It is also observed on the distribution of the category in the clusters. For example, when the sum operator is considered, the silhouette score tends to decrease as a function of the number of clusters, while the inertia decreases.
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/inertias_silcoefs_sum.png)
 
 This implies that the clusters become less cohesive and less well separated as the k, the number of clusters, increases.
 On the other hand, when the mean operator is considered, the silhouette score increases as a function of the number of clusters and seems to reach a plateau when k is approximately 8.
 
-![](https://github.com/theofn/coursera_public/blob/main/plots/inertias_silcoefs_mean.png)
 
 
 ## Effect of the number of clusters
