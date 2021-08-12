@@ -224,9 +224,24 @@ the cluster distribution inside the city and residential areas is quite uniform 
   <figcaption> Fig. 8 - Map using k=8 and operator="mean"</figcaption>
 </figure>
 
-
-
-
 # Discussion
+
+## Effect of the aggregation operation
+
+The aggregation operation leads to different clusterings. This is observed in one of the clustering performance metrics, which we consider: the silhouette score (aka silhouette coefficient). It is also observed on the distribution of the category in the clusters. For example, when the sum operator is considered, the silhouette score tends to decrease as a function of the number of clusters, while the inertia decreases.
+
+![](https://github.com/theofn/coursera_public/blob/main/plots/inertias_silcoefs_sum.png)
+
+This implies that the clusters become less cohesive and less well separated as the k, the number of clusters, increases.
+On the other hand, when the mean operator is considered, the silhouette score increases as a function of the number of clusters and seems to reach a plateau when k is approximately 8.
+
+![](https://github.com/theofn/coursera_public/blob/main/plots/inertias_silcoefs_mean.png)
+
+
+## Effect of the number of clusters
+
+If the number of clusters is increased and when the mean (or media) operator is used, the cluster cohesion as measured by the silhouette score improves. This is also observed in the distribution of venue categories in the clusters. 
+
+
 
 # Conclusion
