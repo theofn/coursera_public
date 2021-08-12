@@ -55,7 +55,7 @@ and will assign each segment one of two colors, corresponding to the two cluster
   <img src=./plots/grid_darmstadt_rect.JPG alt="my alt text"/>
   <figcaption> Fig. 1 - Grid of segments covering Darmstadt area</figcaption>
 </figure>
-
+<br/><br/>
 
 The advantage of the approach decribed previously is that it is very general and it can be applied
 to an area which I know very well. Thus, I can verify that the results
@@ -108,7 +108,7 @@ can be seen in the figure below.
   <img src=./plots/top_cats.jpg alt="my alt text"/>
   <figcaption> Fig. 2 - Venue categories with the highest frequency occurence</figcaption>
 </figure>
-
+<br/><br/>
 
 Ideally, we need no more than 10 categories and they should have a broader sense. For example, it does not make
 a difference for the purpose of this study, if a venue is an "Italian restaurant" or a "French restaurant" or a "Café",
