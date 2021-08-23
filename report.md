@@ -233,32 +233,53 @@ the clustering quality decreases as k is increased.
 
 <figure>
   <img src=./plots/inertias_silcoefs_sum.png alt="my alt text" width="300"/>
-  <figcaption> Fig. 7 - operator="sum": inertia and silhouette score as a function of k</figcaption>
+  <figcaption> Fig. 9 - operator="sum": inertia and silhouette score as a function of k</figcaption>
 </figure>
 <br/><br/>
 
 When the silhouette score is plotted for the operator "mean" (Fig. 8), it is observed 
-that it increase a function of k and seems to reach a plateau when k is approximately 8.
+that the silhouette score increases a function of k and stabilizes for k values above 9.
 
 <figure>
   <img src=./plots/inertias_silcoefs_mean.png alt="my alt text" width="300"/>
-  <figcaption> Fig. 8 - operator="mean": inertia and silhouette score as a function of k</figcaption>
+  <figcaption> Fig. 10 - operator="mean": inertia and silhouette score as a function of k</figcaption>
 </figure>
 
 # Discussion
 
 ## Effect of the aggregation operation
 
-The aggregation operation leads to different clusterings. This is observed in one of the clustering performance metrics, which we consider: the silhouette score (aka silhouette coefficient). It is also observed on the distribution of the category in the clusters. For example, when the sum operator is considered, the silhouette score tends to decrease as a function of the number of clusters, while the inertia decreases.
-
-This implies that the clusters become less cohesive and less well separated as the k, the number of clusters, increases.
-On the other hand, when the mean operator is considered, the silhouette score increases as a function of the number of clusters and seems to reach a plateau when k is approximately 8.
+The aggregation operation leads to different clustering results. This is observed clearly by comparing 
+the silhouette score as a function of k in Fig. 9 and in Fig. 10. 
+It is also observed on the distribution of
+the category in the clusters by comparing Fig. 4 with Fig 6.
+Indeed, the use of the "sum" operator for this data leads to clusters which are less cohesive and less well separated 
+then the clusters obtained with the use of the "mean" operator.
+Furthermore, the results for the "median" operator are similar to the results
+for the "mean" operator. Because of their similarity, these results are not
+presented in detail in this report.
 
 
 ## Effect of the number of clusters
 
-If the number of clusters is increased and when the mean (or media) operator is used, the cluster cohesion as measured by the silhouette score improves. This is also observed in the distribution of venue categories in the clusters. 
-
+When the number of clusters is increased and when the mean (or median) operator is
+used, the cluster cohesion as measured by the silhouette score improves, as shown in Fig. 10. This
+is also observed in the distribution of venue categories in the clusters, by comparing Fig. 6 with Fig. 8. 
+For k>8, the added value by increasing k further, is not that clear and the
+cluster cohesivity as measured with the sihouette score does improve
+substantially, as showin in Fig. 10.
 
 
 # Conclusion
+
+A segmentation and clustering analysis on the Darmstadt area using the Foursquare data is performed
+with the aim of characterizing areas to help potential house buyers to determine good locations for 
+housing purposes.
+A spatial grid on the Darmstadt area is constructed and the data are properly mapped onto the grid using the haversine formulas.
+The data are processed and organized in representative venue categories.
+Using an aggregation operator, the vanue categores are mapped onto the grid segments.
+Finally, unsupervised clustering using the k-means method is applied on the data and the cluster results are analyzed
+as a function of k and the aggregation operator.
+It is found that a good cluster cohesion and realistic representation of the
+area is obtained when the aggregation operator using averaging ("mean") and k=8. 
+
