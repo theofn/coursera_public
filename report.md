@@ -1,4 +1,4 @@
-# Segmentation and clustering of the Darmstadt area (Germany)
+# Enhanced location information for potential home buyers (application on german city using machine learning)
 
 ## Background
 
@@ -32,7 +32,7 @@ to their needs or expectations.
 # Data
 
 My approach is to create a grid of segments 
-(see image below) of the Darmstadt area. 
+(see image below) of the area. 
 We will use the Foursquare location data API to assign to each segment 
 the venues which are close to the segment center and their associated categories.
 We will then cluster the segments using the weight of the nearby venue categories, 
@@ -277,7 +277,7 @@ with the aim of characterizing areas to help potential house buyers to determine
 housing purposes.
 A spatial grid on the Darmstadt area is constructed and the data are properly mapped onto the grid using the haversine formulas.
 The data are processed and organized in representative venue categories.
-Using an aggregation operator, the vanue categores are mapped onto the grid segments.
+Using an aggregation operator, the venue categories are mapped onto the grid segments.
 Finally, unsupervised clustering using the k-means method is applied on the data and the cluster results are analyzed
 as a function of k and the aggregation operator.
 It is found that a good cluster cohesion and realistic representation of the
